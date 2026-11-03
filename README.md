@@ -1,46 +1,58 @@
+# Maria Clara | Portfólio
 
-# Maria Clara.dev — Portfólio Pessoal 💻
+Portfólio pessoal desenvolvido com **Python, Flask, HTML e CSS**.
 
-Portfólio pessoal desenvolvido para apresentar minha trajetória acadêmica, conhecimentos em tecnologia e projetos desenvolvidos durante minha formação em Análise e Desenvolvimento de Sistemas.
+## Executar no computador
 
-## 👩🏻‍💻 Sobre o projeto
+1. Instale Python 3.
+2. No terminal, instale as dependências:
 
-O site apresenta minha formação na Fatec Dom Amaury Castanho, minha experiência na área de TI e minhas principais tecnologias e projetos.
+   ```bash
+   python -m pip install -r requirements.txt
+   ```
 
-## 🛠️ Tecnologias utilizadas
+3. Inicie o projeto:
 
-- HTML5
-- CSS3
-- JavaScript
+   ```bash
+   python app.py
+   ```
 
-## 📂 Estrutura do projeto
+4. Acesse `http://127.0.0.1:5000/`.
+
+## Publicar na internet com Render
+
+1. Crie um repositório **público** no GitHub (por exemplo, `portfolio-maria-clara`).
+2. Envie todos os arquivos desta pasta para a branch `main`.
+3. Entre em https://render.com/ e crie uma conta.
+4. Escolha **New +** → **Web Service** e conecte sua conta do GitHub.
+5. Selecione o repositório do portfólio.
+6. Configure:
+   - **Runtime:** Python
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `gunicorn app:app`
+7. Clique em **Deploy Web Service**.
+8. Quando o deploy terminar, o Render fornecerá um endereço público `onrender.com` para compartilhar.
+
+O arquivo `render.yaml` já contém as configurações básicas para o serviço. Se o Render reconhecer o Blueprint, poderá preencher esses comandos automaticamente.
+
+## Tecnologias
+
+- Python e Flask
+- HTML5 e CSS3
+- Logos de tecnologias carregados do Devicon por CDN
+
+## Estrutura
 
 ```text
 portfolio-maria-clara/
-│
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-│
-└── assets/
+├── app.py
+├── requirements.txt
+├── render.yaml
+├── templates/
+│   └── index.html
+└── static/
+    └── css/
+        └── style.css
 ```
 
-## 🚀 Como executar
-
-1. Faça o download ou clone o repositório.
-2. Abra a pasta do projeto no VS Code.
-3. Abra o arquivo `index.html` no navegador.
-
-## 🌐 Acesse meu portfólio
-
-Em breve, disponível pelo GitHub Pages.
-
-## 📫 Contato
-
-- GitHub: https://github.com/mclarakirschner
-- LinkedIn: https://linkedin.com/in/mclarakirschner
-
----
-
-Desenvolvido por **Maria Clara Kirschner**.
+**Observação:** o site usa logos hospedados externamente pelo Devicon; por isso, é necessário estar conectado à internet para carregá-los.
